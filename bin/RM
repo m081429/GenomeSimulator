@@ -1,0 +1,26 @@
+Template Script
+/data2/bsi/RandD/Synthetic_Genomes/Synthetic_Tumor/genome_smasher_nar/actual_start.csh
+
+Generating VCF RECORD
+Scripts which generate the VCF records (sv.s and snv.s)
+SNPS:  /data4/bsi/epibreast/m087494.couch/Development/Genome_Smasher/Scripts/SNP_mutator_v2.pl (apt)
+
+SV.s wrapper (Includes insertions,deletions ,inversion ,CNV.s and Translocation.s)
+/data4/bsi/epibreast/m087494.couch/Development/Genome_Smasher/SV_generator.sh
+
+
+Sample VCF record file (Includes sv.s and snv.s)
+/data2/bsi/RandD/Synthetic_Genomes/Synthetic_Tumor/genome_smasher_nar/All.variants.vcf
+
+
+
+Actual Implementation [GENOME SIMULATOR]
+/usr/bin/perl /data4/bsi/epibreast/m087494.couch//Development/Genome_Smasher/Scripts/perl_genome_simulator.pl 
+ -refgenome_dir  /data2/bsi/reference/sequence/human/ncbi/37.1 -input_vcf_like /data2/bsi/RandD/Synthetic_Genomes/Synthetic_Tumor/genome_smasher_nar/All.variants.vcf
+-ins_files_dir  /data2/bsi/RandD/Synthetic_Genomes/Synthetic_Tumor/genome_smasher_nar/INS_DIR/ 
+-process_dir /data2/bsi/RandD/Synthetic_Genomes/Synthetic_Tumor/genome_smasher_nar/normal_genome
+-fasta_length 60
+
+
+FINAL VCF FILE CAN BE SEEN IN THE PROCESS DIRECTORY.
+
